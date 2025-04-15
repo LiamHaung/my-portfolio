@@ -21,13 +21,13 @@ const sections = [
       icon: "🎨",
       title: "Illustration",
       description: "插畫是一種結合創意、敘事與美感的視覺表達方式。透過線條、構圖與色彩，將情感與故事具象化，建立與觀者之間的情感連結。我在插畫創作中特別注重角色設計與氛圍營造，無論是兒童繪本、品牌角色還是社群貼圖，都希望傳遞一種溫度與個性。每張圖背後，都是一段關於生活觀察與心境投射的探索歷程。在風格上，我傾向於乾淨清晰的筆觸與富含情緒的配色，讓每個畫面都能單獨講一個故事，也能組合成完整的視覺敘事。插畫對我來說，不僅是視覺設計的一部分，更是情感與創意的出口。",
-      image: "public/images/i4.png",
+      image: "images/i4.png",
     },
     cards: [
       {
         title: "設計概念",
         description: "如果我有一對翅膀。",
-        image: "https://liamhaung.github.io/my-portfolio/images/i5.png",
+        image: "images/i5.png",
       },
       {
         title: "設計概念",
@@ -45,61 +45,61 @@ const sections = [
     id: "graphic",
     images: [
       "/images/大研mock-up.png",
-      "public/images/d6.png",
-      "public/images/d1.png",
+      "images/d6.png",
+      "images/d1.png",
     ],
     intro: {
       icon: "🖼️",
       title: "Design",
       description: "設計是一門整合視覺邏輯與功能需求的藝術。在平面設計領域中，我致力於將資訊視覺化，讓訊息不僅易於理解，更具吸引力。從品牌識別、海報設計到社群素材，每一次創作都從目標受眾與核心概念出發，追求簡潔有力的傳達效果。我喜歡透過網格系統與圖像語言建立視覺層次，並選擇合適的色彩與字型，營造一致性的品牌形象。設計過程中，我會依據專案需求靈活調整風格與節奏，並持續關注使用者體驗與當代視覺趨勢。好的設計應該能在第一眼吸引目光，也在最後留下印象。",
-      image: "public/images/d6.png",
+      image: "images/d6.png",
     },
     cards: [
       {
         title: "靈感來源",
         description: "휩쓸린 에너지 Its so special。",
-        image: "public/images/d7.png",
+        image: "images/d7.png",
       },
       {
         title: "設計概念",
         description: "서로의 존재를 느껴",
-        image: "public/images/d3.png",
+        image: "images/d3.png",
       },
       {
         title: "設計概念",
         description: "서로의 존재를 느껴",
-        image: "public/images/d8.png",
+        image: "images/d8.png",
       },
     ],
   },
   {
     id: "exhibition",
     images: [
-      "public/images/e1.jpg",
-      "public/images/e2.jpg",
-      "public/images/e3.jpg",
+      "images/e1.jpg",
+      "images/e2.jpg",
+      "images/e3.jpg",
     ],
     intro: {
       icon: "🏛️",
       title: "Exhibition(為王一設計在職期間作品)",
       description: "展場設計融合空間規劃、視覺設計與觀眾動線管理，是一種多感官的敘事體驗。我在展場專案中，重視「沉浸感」與「互動性」，希望觀眾不只是觀看，而是參與其中。從主視覺延伸到導覽標示、牆面排版與裝置設計，每一處細節都經過縝密考量，確保視覺風格一致且易於辨識。針對不同主題展覽，我會依據內容特性選擇適合的材料與結構方式，創造出有記憶點的空間氛圍。展場是一種動態媒介，它結合藝術、設計與故事敘述，是我最享受的跨領域創作之一。",
-      image: "public/images/e4.jpg",
+      image: "images/e4.jpg",
     },
     cards: [
       {
         title: "設計概念",
         description: "서로의 존재를 느껴",
-        image: "public/images/e5.jpg",
+        image: "images/e5.jpg",
       },
       {
         title: "設計概念",
         description: "Its about to bang bang",
-        image: "public/images/e6.jpg",
+        image: "images/e6.jpg",
       },
       {
         title: "設計概念",
         description: "Supernova",
-        image: "public/images/e7.jpg",
+        image: "images/e7.jpg",
       },
     ],
   },
@@ -146,7 +146,7 @@ export default function App() {
         {showFullImage && (
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/0604 3.gif"
+              src="/images/0604-3.gif"
               alt="Intro Visual"
               className="w-full h-full object-cover"
             />
@@ -243,7 +243,7 @@ export default function App() {
                 {section.images.map((img, index) => (
                   <div key={index} className="flex items-center justify-center bg-black">
                     <img
-                      src={img.replace("public/", "/")}
+                      src={img}
                       alt={`${section.id}-${index}`}
                       className="max-h-[600px] w-auto object-contain"
                     />
@@ -304,7 +304,7 @@ export default function App() {
               {section.cards.map((card, idx) => (
                 <div key={idx} className="flex-1 rounded-2xl shadow-md bg-white overflow-hidden">
                   <img
-                    src={card.image.replace("/", "/")}
+                    src={card.image}
                     alt={card.title}
                     className="w-full object-contain max-h-60 bg-gray-100"
                   />
