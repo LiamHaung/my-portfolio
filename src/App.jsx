@@ -27,17 +27,17 @@ const sections = [
       {
         title: "設計概念",
         description: "如果我有一對翅膀。",
-        image: "public/images/i5.png",
+        image: "https://liamhaung.github.io/my-portfolio/images/i5.png",
       },
       {
         title: "設計概念",
         description: "원초 그걸 찾아。",
-        image: "public/images/i8.png",
+        image: "images/i8.png",
       },
       {
         title: "設計概念",
         description: "휩쓸린 에너지 Its so special",
-        image: "public/images/i7.png",
+        image: "images/i7.png",
       },
     ],
   }  ,
@@ -155,7 +155,7 @@ export default function App() {
         )}
         <div className="relative z-10 text-center">
           <h1 className="text-xl font-extrabold mb-4 text-black drop-shadow-lg">
-            Liam Studio
+            Liam Studio1
           </h1>
           <p className="text-4xl font-extrabold text-black drop-shadow-lg">即將進入作品集</p>
 
@@ -214,7 +214,7 @@ export default function App() {
       {/* Header GIF */}
       <div className="w-full rounded-2xl ">
         <img
-          src="public/images/101-test 3.gif"
+           src={`${window.location.origin}/images/101-t3.gif`}
           alt="Header GIF"
           className="w-full object-contain py-6"
         />
@@ -243,7 +243,7 @@ export default function App() {
                 {section.images.map((img, index) => (
                   <div key={index} className="flex items-center justify-center bg-black">
                     <img
-                      src={img.replace("/", "/")}
+                      src={img.replace("public/", "/")}
                       alt={`${section.id}-${index}`}
                       className="max-h-[600px] w-auto object-contain"
                     />
@@ -285,7 +285,7 @@ export default function App() {
                   <SwiperSlide key={idx}>
                     <div className="flex flex-col rounded-2xl shadow-md bg-white overflow-hidden">
                       <img
-                        src={card.image.replace("/", "/")}
+                        src={card.image}
                         alt={card.title}
                         className=" mx-auto object-contain  bg-OD1F2D"
                       />
